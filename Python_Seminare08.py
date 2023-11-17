@@ -47,11 +47,9 @@ def find_entry(surname):
 
 def copy_entry(surname, name, phone):
     with open('phonebook.txt','r') as firstfile, open('new_phonebook.txt','a') as secondfile: 
-      
-        # считывание содержимого из первого файла
+    ## считывание содержимого из первого файла
         for line in firstfile: 
-               
-             # считывание содержимого из первого файла добавление содержимого во второй файл 
+    ## считывание содержимого из первого файла добавление содержимого во второй файл 
              secondfile.write(line)
 
 
@@ -79,7 +77,6 @@ def main():
             name = input("Введите имя: ")
             phone = input("Введите номер телефона: ")
             add_entry(surname, name, phone)
-              
         elif choice == "find":
             surname = input("Введите фамилию для поиска: ")
             entry = find_entry(surname)
